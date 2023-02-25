@@ -1,1 +1,1 @@
-# npm-ts-learn
+Repository for learn npm and Typescript from zero
