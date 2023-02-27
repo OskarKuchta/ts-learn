@@ -1,12 +1,11 @@
-import _ from "lodash";
-import moment from "moment";
-const numbers = [1,4,43,21,74,32,15];
-
-_.each(numbers, (numbers) => {
-    console.log(numbers * 2)
-});
-
-let firstData = new Date();
-console.log(firstData);
-let newData = moment("02-26-2023 19:43").format();
-console.log(newData);
+"use strict";
+exports.__esModule = true;
+var moment = require("moment");
+require("moment/locale/pt-br");
+var randomExt = require("random-ext");
+var firstTs = moment("02-26-2023 19:43").format();
+console.log(firstTs);
+var randomize = randomExt.integer(15, 10);
+console.log(randomize);
+var secondRandomize = randomExt.float(10.53, 2.85).toFixed(2);
+console.log(secondRandomize);
