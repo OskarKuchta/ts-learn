@@ -1,9 +1,8 @@
-var user = { name: "Oskar", age: 24 };
-console.log(user.name);
-console.log(user);
-let num = 123;
-console.log(num);
-
 const firstInput = document.querySelector("#input1");
 const secondInput = document.querySelector("#input2");
-const btn = document.querySelector("button");
+const addBtn = document.querySelector("button");
+const add = (v1, v2) => v1 + v2;
+addBtn.addEventListener("click", () => {
+    const sum = add(firstInput.value, secondInput.value);
+    console.log(sum);
+})
