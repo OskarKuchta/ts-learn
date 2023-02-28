@@ -15,5 +15,7 @@
     "random-ext": "^2.8.0",
     "tslint-loader": "^3.5.4",
     "typescript": "^4.9.5"
-  }
+  },
+   "babel": true
+
 }
