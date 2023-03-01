@@ -1,0 +1,36 @@
+html {
+    font-family: "Shantell Sans", cursive;
+}
+body {
+    background: linear-gradient(#6C1E6C, #AF505C);
+    background-repeat: no-repeat;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 60vw;
+  padding: 10px 20px;
+  text-align: center;
+}
+.top {
+    font-size: 1.5rem;
+}
+.write {
+    width: 300px;
+    min-height: 40px;
+    border: transparent;
+}
+.btn {
+    width: 200px;
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+li {
+    list-style-type: none;
+}
