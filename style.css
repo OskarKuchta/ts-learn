@@ -20,21 +20,28 @@ body {
     font-size: 1.5rem;
 }
 .write {
-    width: 300px;
+    width: 350px;
     min-height: 40px;
     border: transparent;
 }
 .btn {
-    width: 200px;
+    width: 270px;
     cursor: pointer;
     border: 2px solid white;
     background-color: transparent;
-    padding: 5px;
+    padding: 10px;
     font-size: 0.9rem;
-}
-.tasks {
-    margin-right: 10%;
+    margin-left: 10px;
 }
 li {
     list-style-type: none;
+}
+.gym {
+    color: rgb(200, 164, 32)
+}
+.work {
+    color: rgb(245, 0, 0);
+}
+.hobby {
+    color: rgb(5, 5, 147)
 }

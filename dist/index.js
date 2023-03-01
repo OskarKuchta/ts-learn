@@ -74,6 +74,5 @@ btn.addEventListener("click", (event) => {
     });
     render();
 });
-addTask({ name: "do chest", category: "gym", done: false });
 renderCategories();
 render();
