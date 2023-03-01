@@ -4,6 +4,7 @@ html {
 body {
     background: linear-gradient(#6C1E6C, #AF505C);
     background-repeat: no-repeat;
+    height: 100vh;
 }
 .container {
   display: flex;
@@ -31,7 +32,7 @@ body {
     padding: 5px;
     font-size: 0.9rem;
 }
-ul {
+.tasks {
     margin-right: 10%;
 }
 li {
