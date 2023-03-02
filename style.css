@@ -15,17 +15,18 @@ body {
   width: 60vw;
   padding: 10px 20px;
   text-align: center;
+  justify-content: center;
 }
 .top {
     font-size: 1.5rem;
 }
 .write {
-    width: 350px;
+    width: 80vw;
     min-height: 40px;
     border: transparent;
 }
 .btn {
-    width: 270px;
+    width: 80vw;
     cursor: pointer;
     border: 2px solid white;
     background-color: transparent;
@@ -44,4 +45,13 @@ li {
 }
 .hobby {
     color: rgb(5, 5, 147)
+}
+
+@media (min-width: 400px) {
+    .btn {
+        max-width: 350px;
+}
+    .write {
+        max-width: 450px;
+    }
 }
