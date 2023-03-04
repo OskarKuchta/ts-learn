@@ -46,7 +46,6 @@ li {
 .hobby {
     color: rgb(5, 5, 147)
 }
-
 @media (min-width: 400px) {
     .btn {
         max-width: 350px;
