@@ -17,5 +17,5 @@ btn.addEventListener("click", (event: Event) => {
     renderTasks(tasks, tasksContainer);
 });
 
-renderCategories(categories, categoriesContainer,selectedCategory);
+renderCategories(categories, categoriesContainer, selectedCategory);
 renderTasks(tasks, tasksContainer);
