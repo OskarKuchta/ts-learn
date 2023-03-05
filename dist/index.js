@@ -34,13 +34,14 @@ const render = () => {
         checkbox.type = "checkbox";
         checkbox.name = task.name;
         checkbox.id = id;
-        checkbox.checked = task.done;
-        checkbox.addEventListener("change", () => {
-            task.done = !task.done;
-        });
         taskElement.appendChild(labelElement);
         taskElement.appendChild(checkbox);
         tasksContainer.appendChild(taskElement);
+        checkbox.addEventListener("click", () => {
+            if(checkbox) {
+                tasksContainer.removeChild(taskElement);
+            }
+        });
     });
 };
 const renderCategories = () => {
