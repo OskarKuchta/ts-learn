@@ -1,4 +1,4 @@
-enum Sides {
+export enum Sides {
     Left = 1,
     Right,
     Up = 10,

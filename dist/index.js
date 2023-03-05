@@ -1,11 +1,13 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Sides = void 0;
 var Sides;
 (function (Sides) {
     Sides[Sides["Left"] = 1] = "Left";
     Sides[Sides["Right"] = 2] = "Right";
     Sides[Sides["Up"] = 10] = "Up";
     Sides[Sides["Down"] = 11] = "Down";
-})(Sides || (Sides = {}));
+})(Sides = exports.Sides || (exports.Sides = {}));
 var first = {
     name: "Oskar",
     age: 24
@@ -30,3 +32,4 @@ var addNumbers = function (a, b) {
     if (b === void 0) { b = 10; }
     return a + b; // Only can use number functionalities
 };
+//# sourceMappingURL=index.js.map
