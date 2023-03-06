@@ -1,45 +1,21 @@
-export enum Sides {
-    Left = 1,
-    Right,
-    Up = 10,
-    Down
-}
-interface Person {
-    name: string,
-    surrname?: string,
-    age: number
-} // only use to objects
-interface Active extends Person {
-    isActive: boolean
-} 
-type CarYear = number; // one line type defined
-type Car = {
-    model: string,
-    year: number
-}
+import { Task, Category, categories } from "./types/type.js";
+import { renderCategories } from "./render/render-categories.js";
+import { renderTasks } from "./render/render-task.js";
+import { tasks, addTask } from "./tasks/task.js";
+const tasksContainer: HTMLElement = document.querySelector(".tasks");
+const taskInput: HTMLInputElement = document.querySelector("#name");
+const btn: HTMLButtonElement = document.querySelector(".btn");
+const categoriesContainer: HTMLElement = document.querySelector(".categories");
+let selectedCategory: Category;
+btn.addEventListener("click", (event: Event) => {
+    event.preventDefault();
+    addTask({
+        name: taskInput.value,
+        done: false,
+        category: selectedCategory,
+    });
+    renderTasks(tasks, tasksContainer);
+});
 
-
-let first: Person = {
-    name: "Oskar",
-    age: 24
-}
-let second: [string, number] = ["21", 21];
-let third: number[] = [18,20,50,1239];
-let fifth: Car = {
-    model: "Mercedes",
-    year: 2020
-}
-second.push("abc"); // bad reason for tuples, it can only contain two items
-third.push(34325);
-console.log(Sides.Up + Sides.Right); //Reuse enum values
-let Mercedes: CarYear = 2020; // only can contain number because type CarYear have number 
-
-let error: number | string = 404; // it's can contain number or string, nothing more
-let secondPerson: Active = {
-    name: "Oskar",
-    age: 24,
-    isActive: true
-} // Person interface with additional criterion isActive
-const addNumbers = (a: number, b: number = 10) => {
-    return a + b; // Only can use number functionalities
-}
+renderCategories(categories, categoriesContainer,selectedCategory);
+renderTasks(tasks, tasksContainer);

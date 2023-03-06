@@ -1,12 +1,9 @@
 {
-  "compilerOptions": {
-       "module": "commonjs",
-       "target": "es5",
-       "noImplicitAny": false,
-       "sourceMap": true,
-       "outDir": "dist/"
-   },
-   "exclude": [
-       "node_modules"
-   ]
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "target": "ES2015",
+        "module": "ES2015"
+    }
+    
 }
