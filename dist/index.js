@@ -4,7 +4,7 @@ const btn = document.querySelector(".btn");
 const categoriesContainer = document.querySelector(".categories");
 let selectedCategory;
 const categories = ["general", "work", "gym", "hobby"];
-const tasks = [{
+let tasks = [{
         name: "Throw up rubbish",
         done: false,
         category: "general",
@@ -35,12 +35,17 @@ const render = () => {
         checkbox.name = task.name;
         checkbox.id = id;
         checkbox.checked = task.done;
-        checkbox.addEventListener("change", () => {
-            task.done = !task.done;
-        });
         taskElement.appendChild(labelElement);
         taskElement.appendChild(checkbox);
         tasksContainer.appendChild(taskElement);
+        document.querySelectorAll("input[type= checkbox]").forEach((element) => element.addEventListener("click", () => {
+            const trashes = [...document.querySelectorAll("input[type= checkbox]")];
+            const elementIndex = trashes.indexOf(element);
+            tasks = tasks.filter((el, index) => {
+                return index !== elementIndex;
+            });
+            render();
+        }));
     });
 };
 const renderCategories = () => {

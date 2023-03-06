@@ -11,7 +11,7 @@ interface Task {
     category?: "general" | "work" | "gym" | "hobby";
 }
 const categories: Category[] = ["general", "work", "gym", "hobby"];
-const tasks: Task[] = [{
+let tasks: Task[] = [{
     name: "Throw up rubbish",
     done: false,
     category: "general",
@@ -30,7 +30,7 @@ const render = () => {
     tasksContainer.innerHTML = "";
     tasks.forEach((task, index) => {
         const taskElement: HTMLElement = document.createElement("li");
-        if (task.category) { 
+        if (task.category) {
             taskElement.classList.add(task.category);
         }
         const labelElement: HTMLLabelElement = document.createElement("label");
@@ -42,12 +42,17 @@ const render = () => {
         checkbox.name = task.name;
         checkbox.id = id;
         checkbox.checked = task.done;
-        checkbox.addEventListener("change", () => {
-            task.done = !task.done;
-        })
         taskElement.appendChild(labelElement);
         taskElement.appendChild(checkbox);
         tasksContainer.appendChild(taskElement);
+        document.querySelectorAll("input[type= checkbox]").forEach((element) => element.addEventListener("click", () => {
+            const trashes = [...document.querySelectorAll("input[type= checkbox]")];
+            const elementIndex = trashes.indexOf(element);
+             tasks = tasks.filter((el,index) => {
+                return index !== elementIndex;
+            });
+            render(); 
+        })) 
     });
 }
 const renderCategories = () => {
