@@ -1,0 +1,11 @@
+{
+  "name": "ts-learn",
+  "version": "1.0.0",
+  "description": "Learn typescript + do little project with him",
+  "main": "index.js",
+  "scripts": {
+    "compile" : "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
